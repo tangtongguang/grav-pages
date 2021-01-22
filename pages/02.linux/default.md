@@ -1,23 +1,34 @@
 ---
 title: Linux
-hide_git_sync_repo_link: false
+
+page-toc:
+  active: true
 ---
 
 ### jenkins
-visudo 修改jenkins执行bash脚本的权限
 
+`visudo` 修改jenkins执行bash脚本的权限
+
+```bash
 jenkins ALL=NOPASSWD: /var/lib/jenkins/script/
 jenkins ALL=(ALL) NOPASSWD:ALL
+```
 
 
 ### docker 无响应时
+
 ```bash
-netstat -ntpl//查看服务
+netstat -ntpl
+#查看服务
 
-ps auxwwf//查看进程树
+ps auxwwf
+#查看进程树
 
-kill -9 pid//杀死进程 -9 强制
+kill -9 pid
+#杀死进程 -9 强制
+
 ```
+
 ### git 保存密码
 
 `git config credential.helper manager`
@@ -27,7 +38,9 @@ kill -9 pid//杀死进程 -9 强制
 `find /usr/share/vim/vim81/doc -name "*.txt" -exec perl /usr/share/vim/vim81/doc/vim2html.pl /usr/share/vim/vim81/doc/tags {} \;`
 
 ### man-pages
-### Man2html configuration file for apache2
+
+Man2html configuration file for apache2
+
 ```apache
 <Location "/cgi-bin/man/">
   <IfModule mod_authz_host.c>
@@ -37,3 +50,5 @@ kill -9 pid//杀死进程 -9 强制
   </IfModule>
 </Location>
 ```
+
+
