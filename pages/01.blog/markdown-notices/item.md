@@ -11,13 +11,9 @@ taxonomy:
     tag: [journal, photography]
 
 
+published: false
 ---
 
 [div class="sections-page-title"]
 ### Sections
 [/div]
-
-
-
-
-

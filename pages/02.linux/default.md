@@ -51,4 +51,34 @@ Man2html configuration file for apache2
 </Location>
 ```
 
+### curl
+`curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
 
+```bash
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
+
+"Above here are the code you just pasted in the last step
+call plug#begin('~/.vim/plugged')
+" YOUR PLUGINS GO HERE
+" Make sure you use single quotes
+" Examples of plugins installations below
+Plug 'junegunn/vim-easy-align'
+
+Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" Initialize plugin system
+call plug#end()
+"Below go the Vim scripts for even further configuration
+```

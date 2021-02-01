@@ -31,9 +31,8 @@ feed:
     description: 'Sample Blog Description'
 pagination: true
 child_type: item
+published: true
 ---
 
 # My **Open Publishing** Space
 ## Create, Share and Collaborate
-
-
